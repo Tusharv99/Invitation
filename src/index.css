@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --gold: #D4AF37;
+    --gold-light: #F4E8C1;
+    --gold-dark: #997A15;
+    --cream: #FAF6F0;
+    --ivory: #FDFBF7;
+    --rose: #C47B78;
+    --blush: #F9EBEA;
+    --burgundy: #4A1521;
+    --sand: #E6DCCD;
+    --sage: #7D8E74;
+    --sage-light: #EBF0E9;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #FAF6F0;
+    color: #4A1521;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #FAF6F0;
+    background-image: 
+      radial-gradient(#d4af3715 1px, transparent 1px),
+      radial-gradient(#c47b7810 1px, #faf6f0 1px);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+  }
+}
+
+/* Custom Typography Utilities */
+.font-royal-title {
+  font-family: 'Cinzel Decorative', 'Playfair Display', serif;
+}
+
+.font-display-royal {
+  font-family: 'Rozha One', 'Playfair Display', serif;
+}
+
+.font-playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-script {
+  font-family: 'Great Vibes', cursive;
+}
+
+.font-sans-body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Gold Gradient Text & Borders */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #BF953F 0%, #FCF6BA 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #C5A059 0%, #E8D49E 50%, #B89045 100%);
+}
+
+.gold-border {
+  border: 1px solid rgba(212, 175, 55, 0.45);
+}
+
+.gold-border-glow {
+  border: 1px solid rgba(212, 175, 55, 0.6);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+}
+
+/* Royal Indian Arch Shape */
+.royal-arch {
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
+}
+
+/* Shimmer animation */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+/* Soft pulse for diya / golden indicators */
+@keyframes royalPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(212, 175, 55, 0);
+  }
+}
+
+.pulse-gold {
+  animation: royalPulse 2.5s infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF6F0;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 9999px;
+}

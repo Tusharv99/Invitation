@@ -1,0 +1,93 @@
+{
+  "couple": {
+    "groom": "Pawan",
+    "bride": "Deepika",
+    "hashtag": "#PawanWedsDeepika",
+    "shloka": "|| वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ। निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा॥",
+    "invocation": "|| श्री गणेशाय नमः ||",
+    "invitationQuote": "Together with their families, invite you to celebrate the joyous union of their hearts and lives in a sacred bond of love and togetherness.",
+    "groomParents": "Smt. Shanti Devi & Shri Rameshwar Lal",
+    "brideParents": "Smt. Sunita Devi & Shri Rajendra Kumar",
+    "groomPhoto": "https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?auto=format&fit=crop&w=800&q=80",
+    "bridePhoto": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80",
+    "couplePortrait": "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80"
+  },
+  "weddingDateIso": "2026-11-20T20:30:00",
+  "datesSummary": "19th & 20th November 2026",
+  "venue": {
+    "name": "Pratap Mahal",
+    "subTitle": "IHCL SeleQtions, Pushkar",
+    "city": "Pushkar, Rajasthan",
+    "fullAddress": "Pratap Mahal - Pushkar Bypass Road, Near Hon'ble Courts, Pushkar, Rajasthan 305022",
+    "mapLink": "https://maps.app.goo.gl/jVcshSzFC6BS4hAPA",
+    "image": "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1200&q=80"
+  },
+  "events": [
+    {
+      "id": "mehendi",
+      "name": "Mehendi Ceremony",
+      "hindiName": "मेहंदी उत्सव",
+      "date": "19th November 2026",
+      "time": "02:00 PM Onwards",
+      "dayBadge": "19 NOV",
+      "subLocation": "Aravalli Courtyard, Pratap Mahal",
+      "colorTheme": "pastel-mint",
+      "description": "Intricate henna art, fragrant jasmine flowers, Rajasthani folk songs, and sweet celebrations.",
+      "icon": "Sparkles"
+    },
+    {
+      "id": "sangeet",
+      "name": "Sangeet & Ring Ceremony",
+      "hindiName": "संगीत संध्या एवं सगाई",
+      "date": "19th November 2026",
+      "time": "07:30 PM Onwards",
+      "dayBadge": "19 NOV",
+      "subLocation": "The Royal Ballroom, Pratap Mahal",
+      "colorTheme": "pastel-rose",
+      "description": "An electrifying musical night filled with joyful family performances, ring exchange, and royal dinner.",
+      "icon": "Music"
+    },
+    {
+      "id": "haldi",
+      "name": "Mangal Haldi",
+      "hindiName": "शुभ हल्दी रस्म",
+      "date": "20th November 2026",
+      "time": "10:00 AM Onwards",
+      "dayBadge": "20 NOV",
+      "subLocation": "Poolside Greens, Pratap Mahal",
+      "colorTheme": "pastel-yellow",
+      "description": "A golden morning of turmeric paste blessings, playful splashes of yellow sunshine, and marigold flower showers.",
+      "icon": "Sun"
+    },
+    {
+      "id": "phere",
+      "name": "Shobha Yatra & Phere",
+      "hindiName": "बारात एवं पाणिग्रहण संस्कार",
+      "date": "20th November 2026",
+      "time": "06:30 PM Baraat • 08:30 PM Phere",
+      "dayBadge": "20 NOV",
+      "subLocation": "The Royal Mandap, Pratap Mahal",
+      "colorTheme": "pastel-gold",
+      "description": "Grand Baraat procession followed by sacred Vedic rituals and seven auspicious vows around the holy fire.",
+      "icon": "Flame"
+    },
+    {
+      "id": "reception",
+      "name": "Royal Reception & Dinner",
+      "hindiName": "प्रीतिभोज एवं स्वागत समारोह",
+      "date": "20th November 2026",
+      "time": "09:30 PM Onwards",
+      "dayBadge": "20 NOV",
+      "subLocation": "Mahal Heritage Lawns, Pratap Mahal",
+      "colorTheme": "pastel-burgundy",
+      "description": "An extravagant royal banquet welcoming the newlyweds with royal Rajasthani delicacies and timeless melodies.",
+      "icon": "UtensilsCrossed"
+    }
+  ],
+  "blessings": {
+    "title": "Awaiting Your Gracious Presence",
+    "hindiTitle": "दर्शनाभिलाषी एवं स्वागताकांक्षी",
+    "message": "Your gracious presence and warm blessings will add immense joy and meaning to our celebration. We eagerly look forward to welcoming you to the holy land of Pushkar.",
+    "families": "Verma & Sharma Families and all near & dear ones"
+  }
+}
