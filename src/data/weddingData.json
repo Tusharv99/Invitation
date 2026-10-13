@@ -1,93 +1,234 @@
 {
   "couple": {
-    "groom": "Pawan",
-    "bride": "Deepika",
+    "groom": "चि० पवन",
+    "groomEnglish": "Pawan",
+    "bride": "आयु० दीपिका",
+    "brideEnglish": "Deepika",
     "hashtag": "#PawanWedsDeepika",
-    "shloka": "|| वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ। निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा॥",
-    "invocation": "|| श्री गणेशाय नमः ||",
-    "invitationQuote": "Together with their families, invite you to celebrate the joyous union of their hearts and lives in a sacred bond of love and togetherness.",
-    "groomParents": "Smt. Shanti Devi & Shri Rameshwar Lal",
-    "brideParents": "Smt. Sunita Devi & Shri Rajendra Kumar",
+    "shloka": "वक्रतुण्ड महाकाय, सूर्यकोटि समप्रभः। निर्विघ्नं कुरुमे देव, सर्वकार्येषु सर्वदा॥",
+    "invocation": "॥ श्री गणेशाय नमः ॥",
+    "blessingLine": "परमपिता परमेश्वर की असीम अनुकम्पा से अपने सुपुत्र",
+    "invitationQuote": "Together with their families, cordially invite you to celebrate the joyous royal union of their hearts and lives in a sacred bond of love and togetherness.",
+    "groomLineage": {
+      "grandParents": "स्व० श्रीमती शान्ति देवी एवं स्व० श्री दीपचंद तूनवाल",
+      "grandParentsEnglish": "Late Smt. Shanti Devi & Late Shri Deepchand Toonwal",
+      "parents": "श्रीमती उषा एवं श्री प्रीतम तूनवाल",
+      "parentsEnglish": "Smt. Usha & Shri Pritam Toonwal",
+      "currentResidence": "पंचकुला",
+      "nativePlace": "सुजानगढ़ (राज.)"
+    },
+    "brideLineage": {
+      "grandParents": "श्रीमती सुवटी देवी एवं श्री हनुमान मल नागा",
+      "grandParentsEnglish": "Smt. Suvati Devi & Shri Hanuman Mal Naga",
+      "parents": "श्रीमती कल्पना देवी एवं श्री नोरतनमल नागा",
+      "parentsEnglish": "Smt. Kalpana Devi & Shri Noratanmal Naga",
+      "currentResidence": "भीलवाड़ा",
+      "nativePlace": "सुजानगढ़ (राज.)"
+    },
     "groomPhoto": "https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?auto=format&fit=crop&w=800&q=80",
     "bridePhoto": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80",
     "couplePortrait": "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80"
   },
-  "weddingDateIso": "2026-11-20T20:30:00",
-  "datesSummary": "19th & 20th November 2026",
+  "weddingDateIso": "2026-11-20T19:00:00",
+  "datesSummary": "19 एवं 20 नवम्बर 2026",
+  "datesSummaryEnglish": "19th & 20th November 2026",
   "venue": {
-    "name": "Pratap Mahal",
-    "subTitle": "IHCL SeleQtions, Pushkar",
-    "city": "Pushkar, Rajasthan",
-    "fullAddress": "Pratap Mahal - Pushkar Bypass Road, Near Hon'ble Courts, Pushkar, Rajasthan 305022",
-    "mapLink": "https://maps.app.goo.gl/jVcshSzFC6BS4hAPA",
+    "name": "पुष्कर फोर्ट रिसॉर्ट",
+    "nameEnglish": "Pushkar Fort Resort",
+    "subTitle": "हेरिटेज रॉयल रिसॉर्ट, पुष्कर",
+    "city": "पुष्कर, राजस्थान",
+    "cityEnglish": "Pushkar, Rajasthan",
+    "fullAddress": "पुष्कर फोर्ट रिसॉर्ट, मोतीसर रोड, गनाहेड़ा, पुष्कर, राजस्थान 305022",
+    "fullAddressEnglish": "Pushkar Fort Resort, Motisar Road, Ganahera, Pushkar, Rajasthan 305022",
+    "mapLink": "https://maps.google.com/?q=Pushkar+Fort+Resort+Pushkar+Rajasthan",
     "image": "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1200&q=80"
   },
-  "events": [
+  "eventsSchedule": [
     {
-      "id": "mehendi",
-      "name": "Mehendi Ceremony",
-      "hindiName": "मेहंदी उत्सव",
-      "date": "19th November 2026",
-      "time": "02:00 PM Onwards",
-      "dayBadge": "19 NOV",
-      "subLocation": "Aravalli Courtyard, Pratap Mahal",
-      "colorTheme": "pastel-mint",
-      "description": "Intricate henna art, fragrant jasmine flowers, Rajasthani folk songs, and sweet celebrations.",
-      "icon": "Sparkles"
+      "dayTitle": "गुरूवार, दिनांक 19 नवम्बर 2026",
+      "dayTitleEnglish": "Thursday, 19th November 2026",
+      "dateKey": "19th",
+      "ceremonies": [
+        {
+          "id": "mayra",
+          "name": "मायरा (भात)",
+          "nameEnglish": "Mayra (Bhaat)",
+          "time": "दोपहर 12.00 बजे",
+          "timeEnglish": "12:00 PM",
+          "icon": "Gift",
+          "theme": "royal-amber",
+          "subLocation": "शाही चौक, पुष्कर फोर्ट रिसॉर्ट",
+          "description": "ननिहाल पक्ष द्वारा स्नेह, उपहार एवं मंगल वस्त्राभूषण का पारंपरिक मांगल्य आगमन।"
+        },
+        {
+          "id": "haldi-mehendi",
+          "name": "हल्दी / मेंहदी",
+          "nameEnglish": "Haldi & Mehendi",
+          "time": "दोपहर 2.00 बजे",
+          "timeEnglish": "02:00 PM",
+          "icon": "Sparkles",
+          "theme": "royal-gold",
+          "subLocation": "राजस्थानी प्रांगण, पुष्कर फोर्ट",
+          "description": "कुंकुम, सुगंधित हल्दी एवं शगुन की मेंहदी की सतरंगी रस्मों के साथ मधुर उत्सव।"
+        },
+        {
+          "id": "sagai",
+          "name": "सगाई (तिलक एवं अंगूठी रस्म)",
+          "nameEnglish": "Sagai (Engagement)",
+          "time": "सांय 5.30 बजे",
+          "timeEnglish": "05:30 PM",
+          "icon": "HeartHandshake",
+          "theme": "royal-crimson",
+          "subLocation": "शाही दरबार, पुष्कर फोर्ट",
+          "description": "वर-वधू के पावन परिणय का संकल्प एवं अंगूठी बदलने का पावन मांगलिक संस्कार।"
+        },
+        {
+          "id": "mahila-sangeet",
+          "name": "महिला संगीत",
+          "nameEnglish": "Mahila Sangeet",
+          "time": "सांय 7.30 बजे",
+          "timeEnglish": "07:30 PM",
+          "icon": "Music",
+          "theme": "royal-peacock",
+          "subLocation": "महल रंगमंच, पुष्कर फोर्ट",
+          "description": "पारंपरिक राजस्थानी गीतों, नगाड़ों की गूँज एवं सगे-संबंधियों के नृत्य-संगीत की सुरमयी शाम।"
+        },
+        {
+          "id": "ratri-bhoj-19",
+          "name": "रात्रि भोज (प्रीतिभोज)",
+          "nameEnglish": "Royal Dinner (Preetibhoj)",
+          "time": "सांय 8.00 बजे",
+          "timeEnglish": "08:00 PM",
+          "icon": "UtensilsCrossed",
+          "theme": "royal-ruby",
+          "subLocation": "शाही महल लॉन, पुष्कर फोर्ट",
+          "description": "शाही राजस्थानी व्यंजनों, दाल-बाटी-चूरमा एवं मिष्ठानों से परिपूर्ण भव्य रात्रिभोज।"
+        }
+      ]
     },
     {
-      "id": "sangeet",
-      "name": "Sangeet & Ring Ceremony",
-      "hindiName": "संगीत संध्या एवं सगाई",
-      "date": "19th November 2026",
-      "time": "07:30 PM Onwards",
-      "dayBadge": "19 NOV",
-      "subLocation": "The Royal Ballroom, Pratap Mahal",
-      "colorTheme": "pastel-rose",
-      "description": "An electrifying musical night filled with joyful family performances, ring exchange, and royal dinner.",
-      "icon": "Music"
-    },
-    {
-      "id": "haldi",
-      "name": "Mangal Haldi",
-      "hindiName": "शुभ हल्दी रस्म",
-      "date": "20th November 2026",
-      "time": "10:00 AM Onwards",
-      "dayBadge": "20 NOV",
-      "subLocation": "Poolside Greens, Pratap Mahal",
-      "colorTheme": "pastel-yellow",
-      "description": "A golden morning of turmeric paste blessings, playful splashes of yellow sunshine, and marigold flower showers.",
-      "icon": "Sun"
-    },
-    {
-      "id": "phere",
-      "name": "Shobha Yatra & Phere",
-      "hindiName": "बारात एवं पाणिग्रहण संस्कार",
-      "date": "20th November 2026",
-      "time": "06:30 PM Baraat • 08:30 PM Phere",
-      "dayBadge": "20 NOV",
-      "subLocation": "The Royal Mandap, Pratap Mahal",
-      "colorTheme": "pastel-gold",
-      "description": "Grand Baraat procession followed by sacred Vedic rituals and seven auspicious vows around the holy fire.",
-      "icon": "Flame"
-    },
-    {
-      "id": "reception",
-      "name": "Royal Reception & Dinner",
-      "hindiName": "प्रीतिभोज एवं स्वागत समारोह",
-      "date": "20th November 2026",
-      "time": "09:30 PM Onwards",
-      "dayBadge": "20 NOV",
-      "subLocation": "Mahal Heritage Lawns, Pratap Mahal",
-      "colorTheme": "pastel-burgundy",
-      "description": "An extravagant royal banquet welcoming the newlyweds with royal Rajasthani delicacies and timeless melodies.",
-      "icon": "UtensilsCrossed"
+      "dayTitle": "शुक्रवार, दिनांक 20 नवम्बर 2026",
+      "dayTitleEnglish": "Friday, 20th November 2026",
+      "dateKey": "20th",
+      "ceremonies": [
+        {
+          "id": "sehra-bandi",
+          "name": "सेहरा बंदी",
+          "nameEnglish": "Sehra Bandi",
+          "time": "सुबह 11.30 बजे",
+          "timeEnglish": "11:30 AM",
+          "icon": "Crown",
+          "theme": "royal-gold",
+          "subLocation": "महल अंतःपुर, पुष्कर फोर्ट",
+          "description": "राजपूती साफा, सेहरा एवं पारंपरिक रीति-रिवाजों से दूल्हे राजा का मंगल अभिषेक।"
+        },
+        {
+          "id": "nikaasi",
+          "name": "निकासी (शाही बारात)",
+          "nameEnglish": "Nikaasi (Grand Baraat)",
+          "time": "दोपहर 2.00 बजे",
+          "timeEnglish": "02:00 PM",
+          "icon": "Drum",
+          "theme": "royal-crimson",
+          "subLocation": "शाही मुख्य द्वार, पुष्कर फोर्ट",
+          "description": "ढोल-नगाड़ों, शहनाई की धुन और शाही लाव-लश्कर के साथ दूल्हे की बारात का प्रस्थान।"
+        },
+        {
+          "id": "phere",
+          "name": "पाणिग्रहण संस्कार (सात फेरे)",
+          "nameEnglish": "Pani Grahan & Phere",
+          "time": "गोधूलि वेला / सांयकाल",
+          "timeEnglish": "Auspicious Evening",
+          "icon": "Flame",
+          "theme": "royal-amber",
+          "subLocation": "रॉयल मंडप वेदी, पुष्कर फोर्ट",
+          "description": "अग्नि को साक्षी मानकर सप्तपदी के सात पावन वचन और अटूट प्रेम का मंगल बंधन।"
+        },
+        {
+          "id": "ratri-bhoj-20",
+          "name": "रात्रि भोज (स्वागत समारोह)",
+          "nameEnglish": "Royal Wedding Banquet",
+          "time": "सांय 7.00 बजे",
+          "timeEnglish": "07:00 PM",
+          "icon": "UtensilsCrossed",
+          "theme": "royal-ruby",
+          "subLocation": "रॉयल हेरिटेज गार्डेन, पुष्कर फोर्ट",
+          "description": "नव-दंपति के स्वागत में संपूर्ण परिवार व इष्ट मित्रों के साथ महाभोज एवं मंगल मिलन।"
+        }
+      ]
     }
   ],
+  "familyDetails": {
+    "jawaiPaksha": {
+      "title": "जवाई पक्ष",
+      "titleEnglish": "Jawai Paksha (Sons-in-law & Daughters)",
+      "members": [
+        { "names": "निर्मला—अमरचंद जी गंगपारियां", "place": "चंडीगढ़" },
+        { "names": "किरण—महेन्द्र जी खुड़िया", "place": "सुजानगढ़" },
+        { "names": "राखी—राजेन्द्र जी भाटीवाल", "place": "वापी" },
+        { "names": "कनूप्रिया—विकास जी भाटीवाल", "place": "जयपुर" },
+        { "names": "ज्योति—प्रेम जी होदकाशीया", "place": "चाडवास" }
+      ]
+    },
+    "nanihalPaksha": {
+      "title": "ननिहाल पक्ष",
+      "titleEnglish": "Nanihal Paksha (Maternal Family)",
+      "members": [
+        { "name": "घेवर चंद जी बासनीवाल" },
+        { "name": "शिव प्रकाश जी बासनीवाल" },
+        { "name": "हंसराज जी बासनीवाल" },
+        { "name": "हेमंत जी बासनीवाल" },
+        { "name": "तनूज जी बासनीवाल" },
+        { "name": "केशव जी बासनीवाल" }
+      ]
+    },
+    "vinit": {
+      "title": "विनीत",
+      "titleEnglish": "Vinit (Solicited with Warm Regards)",
+      "organizations": [
+        { "name": "एस.डी.इन्टरप्राईजिज", "place": "पंचकुला" },
+        { "name": "शांति दीप कंस्ट्रक्शन", "place": "सुजानगढ़" },
+        { "name": "वासु शिलालेख", "place": "जोधपुर" },
+        { "name": "डॉ० ज्योति 4 लाइफ फिजियोथेरेपी क्लिनिक", "place": "सुजानगढ़" },
+        { "name": "रणभूमि फिटनेस", "place": "पुणे" }
+      ],
+      "contactNumbers": [
+        "9417008514",
+        "6280404121",
+        "9468500885",
+        "9460810911"
+      ]
+    },
+    "darshanabhilashi": {
+      "title": "दर्शनाभिलाषी",
+      "titleEnglish": "Darshanabhilashi (Awaiting Your Blessings)",
+      "couples": [
+        "दयाल—साधना",
+        "परम—पुनीत",
+        "आदर्श—स्नेहा",
+        "शुभम—संगीता",
+        "सक्षम—डॉ. ज्योति"
+      ],
+      "familyLine": "वासुदेव, निष्का, पार्थ, हर्षवर्धन एवं समस्त तूनवाल परिवार"
+    },
+    "baalManuhaar": {
+      "title": "!! बाल मनुहार !!",
+      "quote": "हमारे चाचू/मामू की शादी में जलुल जलुल आना :",
+      "children": [
+        "वासुदेव",
+        "निष्का",
+        "पार्थ",
+        "हर्षवर्धन",
+        "गुंजन",
+        "भव्या",
+        "सिद्धार्थ"
+      ]
+    }
+  },
   "blessings": {
     "title": "Awaiting Your Gracious Presence",
     "hindiTitle": "दर्शनाभिलाषी एवं स्वागताकांक्षी",
-    "message": "Your gracious presence and warm blessings will add immense joy and meaning to our celebration. We eagerly look forward to welcoming you to the holy land of Pushkar.",
-    "families": "Verma & Sharma Families and all near & dear ones"
+    "message": "आपकी गरिमामयी उपस्थिति एवं पावन आशीर्वाद हमारे इस मांगलिक उत्सव की शोभा बढ़ाएंगे। हम आपका पुष्कर की पावन धरा पर हार्दिक स्वागत करते हैं।",
+    "familySignature": "समस्त तूनवाल परिवार"
   }
 }

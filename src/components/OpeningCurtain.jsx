@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import gsap from 'gsap';
 import confetti from 'canvas-confetti';
-import { GaneshMotif, GoldCorner } from './RoyalMotifs';
+import { GaneshMotif, GoldCorner, ShehnaiNagadaMotif, RoyalElephantMotif } from './RoyalMotifs';
 import { Sparkles } from 'lucide-react';
 
 export const OpeningCurtain = ({ onOpenComplete, onMusicTrigger }) => {
@@ -18,12 +18,12 @@ export const OpeningCurtain = ({ onOpenComplete, onMusicTrigger }) => {
 
     // Trigger golden and rose festive confetti shower
     confetti({
-      particleCount: 75,
-      spread: 70,
+      particleCount: 85,
+      spread: 75,
       origin: { y: 0.6 },
-      colors: ['#D4AF37', '#F4E8C1', '#C47B78', '#FAF6F0'],
+      colors: ['#D4AF37', '#F7E7B4', '#C47B78', '#FAF6F0', '#E5A93C'],
       shapes: ['circle'],
-      scalar: 1.1
+      scalar: 1.2
     });
 
     if (onMusicTrigger) {
@@ -70,91 +70,97 @@ export const OpeningCurtain = ({ onOpenComplete, onMusicTrigger }) => {
   return (
     <div
       ref={containerRef}
-      className="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-[#2D1318]"
+      className="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-[#1F040A]"
     >
       {/* Left Royal Door / Curtain */}
       <div
         ref={leftDoorRef}
-        className="absolute inset-y-0 left-0 w-1/2 bg-gradient-to-br from-[#4A1521] via-[#381019] to-[#240A10] border-r border-[#D4AF37]/40 shadow-2xl z-10 flex flex-col justify-between p-4"
+        className="absolute inset-y-0 left-0 w-1/2 bg-gradient-to-br from-[#4A0E1D] via-[#330510] to-[#1F040A] border-r-2 border-[#D4AF37]/50 shadow-2xl z-10 flex flex-col justify-between p-4"
       >
-        <GoldCorner className="w-10 h-10 text-[#D4AF37]/50" />
+        <GoldCorner className="w-10 h-10 text-[#D4AF37]/60" />
         <div className="my-auto opacity-10 flex justify-center">
-          <div className="w-64 h-64 rounded-full border border-[#D4AF37] border-dashed"></div>
+          <div className="w-64 h-64 rounded-full border-2 border-[#D4AF37] border-dashed"></div>
         </div>
         <div className="rotate-90 origin-bottom-left">
-          <GoldCorner className="w-10 h-10 text-[#D4AF37]/50" />
+          <GoldCorner className="w-10 h-10 text-[#D4AF37]/60" />
         </div>
       </div>
 
       {/* Right Royal Door / Curtain */}
       <div
         ref={rightDoorRef}
-        className="absolute inset-y-0 right-0 w-1/2 bg-gradient-to-bl from-[#4A1521] via-[#381019] to-[#240A10] border-l border-[#D4AF37]/40 shadow-2xl z-10 flex flex-col justify-between p-4 items-end"
+        className="absolute inset-y-0 right-0 w-1/2 bg-gradient-to-bl from-[#4A0E1D] via-[#330510] to-[#1F040A] border-l-2 border-[#D4AF37]/50 shadow-2xl z-10 flex flex-col justify-between p-4 items-end"
       >
         <div className="rotate-90 origin-top-right">
-          <GoldCorner className="w-10 h-10 text-[#D4AF37]/50" />
+          <GoldCorner className="w-10 h-10 text-[#D4AF37]/60" />
         </div>
         <div className="my-auto opacity-10 flex justify-center">
-          <div className="w-64 h-64 rounded-full border border-[#D4AF37] border-dashed"></div>
+          <div className="w-64 h-64 rounded-full border-2 border-[#D4AF37] border-dashed"></div>
         </div>
         <div className="rotate-180">
-          <GoldCorner className="w-10 h-10 text-[#D4AF37]/50" />
+          <GoldCorner className="w-10 h-10 text-[#D4AF37]/60" />
         </div>
       </div>
 
       {/* Center Invitation Card Seal & Content */}
       <div
         ref={contentRef}
-        className="relative z-20 flex flex-col items-center text-center px-6 max-w-sm mx-auto"
+        className="relative z-20 flex flex-col items-center text-center px-4 max-w-sm mx-auto"
       >
-        {/* Lord Ganesha */}
-        <div className="mb-3 animate-pulse">
-          <GaneshMotif className="w-16 h-16 text-[#D4AF37] drop-shadow-[0_2px_10px_rgba(212,175,55,0.4)]" />
+        {/* Lord Ganesha with Shehnai Motifs */}
+        <div className="flex items-center justify-center gap-2 mb-2 animate-pulse">
+          <ShehnaiNagadaMotif className="w-8 h-7 text-[#D4AF37]" />
+          <GaneshMotif className="w-16 h-16 text-[#D4AF37] drop-shadow-[0_2px_14px_rgba(212,175,55,0.5)]" />
+          <ShehnaiNagadaMotif className="w-8 h-7 text-[#D4AF37]" flip={true} />
         </div>
 
-        <p className="text-[#F4E8C1] text-xs tracking-[0.25em] font-medium uppercase font-sans-body mb-1">
-          || श्री गणेशाय नमः ||
+        <p className="text-[#F7E7B4] text-xs tracking-[0.25em] font-semibold uppercase font-devanagari mb-1">
+          ॥ श्री गणेशाय नमः ॥
         </p>
 
-        <h2 className="text-[#FAF6F0] font-royal-title text-2xl tracking-wider my-2">
-          शुभ विवाह निमंत्रण
+        <h2 className="text-[#FAF6F0] font-yatra text-2xl tracking-wide my-1">
+          शाही विवाह निमंत्रण पत्र
         </h2>
 
-        <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent my-2"></div>
+        <div className="w-28 h-0.5 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent my-2"></div>
 
-        <p className="text-[#F4E8C1]/90 text-sm font-playfair italic mb-1">
-          Royal Wedding of
+        <p className="text-[#F7E7B4]/90 text-sm font-playfair italic mb-1">
+          The Royal Wedding of
         </p>
         
-        <h1 className="text-3xl font-royal-title gold-gradient-text tracking-wide mb-1 font-bold">
-          Deepika & Pawan
+        <h1 className="text-3xl font-yatra gold-gradient-text tracking-wide mb-1 font-bold">
+          चि० पवन संग आयु० दीपिका
         </h1>
 
-        <p className="text-[#FAF6F0]/80 text-xs tracking-widest font-sans-body uppercase mb-6">
-          19 & 20 November 2026 • Pushkar
+        <p className="text-[#F7E7B4]/80 text-[11px] font-marcellus tracking-wider uppercase mb-1">
+          (Pawan & Deepika)
+        </p>
+
+        <p className="text-[#FAF6F0]/80 text-xs tracking-wider font-devanagari mb-6">
+          19 एवं 20 नवम्बर 2026 • पुष्कर फोर्ट रिसॉर्ट, पुष्कर
         </p>
 
         {/* Golden Wax Seal Interactive Button */}
-        <div ref={sealRef} className="relative mt-2">
+        <div ref={sealRef} className="relative mt-1">
           <button
             onClick={handleOpen}
             disabled={isOpening}
-            className="group relative flex flex-col items-center justify-center w-28 h-28 rounded-full gold-gradient-bg shadow-[0_0_30px_rgba(212,175,55,0.5)] border-2 border-[#FAF6F0] transition-transform duration-300 hover:scale-105 active:scale-95 pulse-gold cursor-pointer"
+            className="group relative flex flex-col items-center justify-center w-28 h-28 rounded-full gold-gradient-bg shadow-[0_0_35px_rgba(212,175,55,0.6)] border-2 border-[#FAF6F0] transition-transform duration-300 hover:scale-105 active:scale-95 pulse-gold cursor-pointer"
           >
-            <div className="absolute inset-1 rounded-full border border-[#4A1521]/30 flex flex-col items-center justify-center p-2 text-center">
-              <span className="text-[#4A1521] text-[10px] font-bold tracking-widest uppercase font-sans-body">
+            <div className="absolute inset-1 rounded-full border border-[#4A0E1A]/40 flex flex-col items-center justify-center p-2 text-center">
+              <span className="text-[#4A0E1A] text-xs font-bold tracking-widest uppercase font-devanagari">
                 खोलिए
               </span>
-              <Sparkles className="w-5 h-5 text-[#4A1521] my-0.5 group-hover:rotate-12 transition-transform" />
-              <span className="text-[#4A1521] text-[9px] font-semibold tracking-wider uppercase font-sans-body">
+              <Sparkles className="w-5 h-5 text-[#4A0E1A] my-0.5 group-hover:rotate-12 transition-transform" />
+              <span className="text-[#4A0E1A] text-[9.5px] font-bold tracking-wider uppercase font-sans-body">
                 Open Invite
               </span>
             </div>
           </button>
         </div>
 
-        <p className="text-[#F4E8C1]/70 text-[11px] tracking-widest uppercase mt-5 font-sans-body">
-          Touch to unfold the Royal Invitation
+        <p className="text-[#F7E7B4]/80 text-[11px] tracking-widest mt-5 font-devanagari">
+          शाही निमंत्रण खोलने हेतु स्पर्श करें
         </p>
       </div>
     </div>

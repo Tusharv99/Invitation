@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { KalashMotif, GoldCorner } from './RoyalMotifs';
+import { KalashMotif, GoldCorner, ShehnaiNagadaMotif } from './RoyalMotifs';
 import { Clock, CalendarPlus } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
 gsap.registerPlugin(ScrollTrigger);
 
-export const CountdownSection = ({ targetDateIso = "2026-11-20T20:30:00" }) => {
+export const CountdownSection = ({ targetDateIso = "2026-11-20T19:00:00" }) => {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -52,7 +52,6 @@ export const CountdownSection = ({ targetDateIso = "2026-11-20T20:30:00" }) => {
     return () => clearInterval(timer);
   }, [targetDateIso]);
 
-  // Fast, instant ScrollTrigger animation - triggers immediately and stays visible
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.fromTo(kalashRef.current,
@@ -108,22 +107,22 @@ export const CountdownSection = ({ targetDateIso = "2026-11-20T20:30:00" }) => {
     return () => ctx.revert();
   }, []);
 
-  const triggerDigitSparkle = (index) => {
+  const triggerDigitSparkle = () => {
     confetti({
       particleCount: 25,
       spread: 45,
       origin: { y: 0.55 },
-      colors: ['#D4AF37', '#FAF6F0', '#E8C5B8'],
+      colors: ['#D4AF37', '#FAF6F0', '#E5A93C'],
       shapes: ['circle'],
       scalar: 0.9
     });
   };
 
   const createGoogleCalendarLink = () => {
-    const title = encodeURIComponent("Royal Wedding of Pawan & Deepika");
-    const details = encodeURIComponent("Grand Royal Wedding Celebration of Pawan & Deepika at Pratap Mahal, Pushkar, Rajasthan.");
-    const location = encodeURIComponent("Pratap Mahal - Pushkar Bypass Road, Pushkar, Rajasthan 305022");
-    const dates = "20261119T100000Z/20261121T060000Z";
+    const title = encodeURIComponent("शाही विवाह: चि० पवन संग आयु० दीपिका");
+    const details = encodeURIComponent("शाही विवाह समारोह: चि० पवन संग आयु० दीपिका, पुष्कर फोर्ट रिसॉर्ट, पुष्कर, राजस्थान।");
+    const location = encodeURIComponent("Pushkar Fort Resort, Motisar Road, Ganahera, Pushkar, Rajasthan 305022");
+    const dates = "20261119T063000Z/20261121T020000Z";
     return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${dates}&details=${details}&location=${location}`;
   };
 
@@ -138,28 +137,28 @@ export const CountdownSection = ({ targetDateIso = "2026-11-20T20:30:00" }) => {
     <section
       ref={sectionRef}
       id="countdown-section"
-      className="relative py-20 px-4 flex flex-col justify-center items-center text-center"
+      className="relative py-20 px-3 md:px-4 flex flex-col justify-center items-center text-center"
     >
       <div className="w-full max-w-md mx-auto relative z-10">
         {/* Sacred Kalash Top */}
         <div ref={kalashRef} className="flex flex-col items-center mb-4">
           <KalashMotif className="w-14 h-14 text-[#D4AF37] drop-shadow-sm mb-2" />
-          <p className="text-[#997A15] text-xs tracking-[0.25em] font-semibold uppercase font-sans-body">
+          <p className="text-[#D4AF37] text-xs tracking-[0.3em] font-semibold uppercase font-sans-body">
             शुभ लग्न मुहूर्त
           </p>
-          <h2 className="text-2xl md:text-3xl font-royal-title text-[#4A1521] font-bold mt-1">
-            Counting Down to Forever
+          <h2 className="text-2xl md:text-3xl font-royal-title text-[#FAF6F0] font-bold mt-1 tracking-wide">
+            मांगलिक समय की प्रतीक्षा
           </h2>
-          <div className="w-20 h-0.5 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent my-2"></div>
-          <p className="text-[#4A1521]/75 text-xs font-sans-body max-w-xs mx-auto leading-relaxed">
-            Every passing moment brings us closer to the sacred vows of holy matrimony at Pratap Mahal, Pushkar.
+          <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent my-2"></div>
+          <p className="text-[#FAF6F0]/80 text-xs font-devanagari max-w-xs mx-auto leading-relaxed">
+            प्रत्येक बीतता क्षण हमें पुष्कर फोर्ट रिसॉर्ट में संपन्न होने वाले पावन सात फेरों के निकट ले जा रहा है।
           </p>
         </div>
 
         {/* Royal Framed Countdown Clock Card */}
         <div
           ref={cardRef}
-          className="relative p-5 rounded-3xl bg-gradient-to-b from-[#4A1521] via-[#381019] to-[#2B0B13] border-2 border-[#D4AF37]/50 shadow-[0_15px_40px_rgba(74,21,33,0.35)] my-6 text-[#FAF6F0] transition-transform duration-300 hover:scale-[1.01]"
+          className="relative p-5 rounded-3xl bg-gradient-to-b from-[#4A0E1D] via-[#360812] to-[#20030A] border-2 border-[#D4AF37]/60 shadow-[0_15px_45px_rgba(0,0,0,0.6),0_0_20px_rgba(212,175,55,0.25)] my-6 text-[#FAF6F0] transition-transform duration-300 hover:scale-[1.01]"
         >
           {/* Ornamental Corners */}
           <div className="absolute top-2 left-2 pointer-events-none">
@@ -175,9 +174,9 @@ export const CountdownSection = ({ targetDateIso = "2026-11-20T20:30:00" }) => {
             <GoldCorner className="w-6 h-6 text-[#D4AF37]" />
           </div>
 
-          <div className="flex items-center justify-center gap-2 mb-4 text-[#F4E8C1]/90 text-xs tracking-wider uppercase font-sans-body">
+          <div className="flex items-center justify-center gap-2 mb-4 text-[#F7E7B4] text-xs tracking-wider uppercase font-devanagari font-bold">
             <Clock className="w-3.5 h-3.5 text-[#D4AF37] animate-spin-slow" />
-            <span>Hasta Milap & Phere Mahurat</span>
+            <span>पाणिग्रहण संस्कार एवं सात फेरे मुहूर्त</span>
           </div>
 
           {/* Time digits grid with interactive touch bounce */}
@@ -187,16 +186,16 @@ export const CountdownSection = ({ targetDateIso = "2026-11-20T20:30:00" }) => {
                 key={unit.label}
                 ref={(el) => (digitsRef.current[idx] = el)}
                 onClick={() => triggerDigitSparkle(idx)}
-                className="flex flex-col items-center justify-center py-3 px-1 rounded-2xl bg-[#FAF6F0]/10 border border-[#D4AF37]/35 backdrop-blur-sm shadow-inner transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer hover:bg-[#FAF6F0]/20 group"
+                className="flex flex-col items-center justify-center py-3 px-1 rounded-2xl bg-white/10 border border-[#D4AF37]/40 backdrop-blur-sm shadow-inner transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer hover:bg-white/20 group"
                 title="Tap to celebrate!"
               >
                 <span className="font-royal-title text-2xl font-extrabold gold-gradient-text tracking-tight group-hover:scale-110 transition-transform">
                   {unit.value}
                 </span>
-                <span className="text-[10px] uppercase tracking-wider font-semibold text-[#F4E8C1] mt-1 font-sans-body">
+                <span className="text-[10px] uppercase tracking-wider font-semibold text-[#F7E7B4] mt-1 font-sans-body">
                   {unit.label}
                 </span>
-                <span className="text-[9px] text-[#F4E8C1]/60 font-sans-body">
+                <span className="text-[9.5px] text-[#F7E7B4]/70 font-devanagari">
                   {unit.hindi}
                 </span>
               </div>
@@ -204,8 +203,8 @@ export const CountdownSection = ({ targetDateIso = "2026-11-20T20:30:00" }) => {
           </div>
 
           {/* Sanskrit Vivah Shloka snippet */}
-          <p className="text-[11px] text-[#F4E8C1]/80 italic mt-5 leading-relaxed font-sans-body border-t border-[#D4AF37]/25 pt-3">
-            "तदेव लग्नं सुदिनं तदेव, ताराबलं चन्द्रबलं तदेव..."
+          <p className="text-[11px] text-[#F7E7B4]/85 italic mt-5 leading-relaxed font-devanagari border-t border-[#D4AF37]/30 pt-3">
+            "तदेव लग्नं सुदिनं तदेव, ताराबलं चन्द्रबलं तदेव। विद्याबलं दैवबलं तदेव, लक्ष्मीपते तेऽङ्घ्रियुगं स्मरामि॥"
           </p>
         </div>
 
@@ -214,11 +213,11 @@ export const CountdownSection = ({ targetDateIso = "2026-11-20T20:30:00" }) => {
           href={createGoogleCalendarLink()}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#FAF6F0] border border-[#D4AF37] text-[#4A1521] shadow-md hover:bg-white transition-all duration-300 hover:scale-105 active:scale-95 group font-sans-body cursor-pointer"
+          className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-[#D4AF37] to-[#BF8C2C] text-[#2D0A14] font-bold shadow-lg hover:brightness-110 transition-all duration-300 hover:scale-105 active:scale-95 group font-devanagari cursor-pointer"
         >
-          <CalendarPlus className="w-4 h-4 text-[#D4AF37] group-hover:rotate-12 transition-transform" />
-          <span className="text-xs font-semibold tracking-wider uppercase">
-            Add to Google Calendar
+          <CalendarPlus className="w-4 h-4 text-[#2D0A14] group-hover:rotate-12 transition-transform" />
+          <span className="text-xs tracking-wider">
+            गूगल कैलेंडर में जोड़ें (Add to Calendar)
           </span>
         </a>
       </div>
