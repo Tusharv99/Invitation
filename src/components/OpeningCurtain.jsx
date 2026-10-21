@@ -44,27 +44,27 @@ export const OpeningCurtain = ({ onOpenComplete, onMusicTrigger }) => {
       duration: 0.7,
       ease: 'back.in(1.7)'
     })
-    .to(contentRef.current, {
-      scale: 0.9,
-      opacity: 0,
-      duration: 0.5,
-      ease: 'power2.in'
-    }, '-=0.3')
-    .to(leftDoorRef.current, {
-      xPercent: -100,
-      duration: 1.2,
-      ease: 'power3.inOut'
-    }, '-=0.2')
-    .to(rightDoorRef.current, {
-      xPercent: 100,
-      duration: 1.2,
-      ease: 'power3.inOut'
-    }, '<')
-    .to(containerRef.current, {
-      opacity: 0,
-      pointerEvents: 'none',
-      duration: 0.4
-    });
+      .to(contentRef.current, {
+        scale: 0.9,
+        opacity: 0,
+        duration: 0.5,
+        ease: 'power2.in'
+      }, '-=0.3')
+      .to(leftDoorRef.current, {
+        xPercent: -100,
+        duration: 1.2,
+        ease: 'power3.inOut'
+      }, '-=0.2')
+      .to(rightDoorRef.current, {
+        xPercent: 100,
+        duration: 1.2,
+        ease: 'power3.inOut'
+      }, '<')
+      .to(containerRef.current, {
+        opacity: 0,
+        pointerEvents: 'none',
+        duration: 0.4
+      });
   };
 
   return (
@@ -127,9 +127,9 @@ export const OpeningCurtain = ({ onOpenComplete, onMusicTrigger }) => {
         <p className="text-[#F7E7B4]/90 text-sm font-playfair italic mb-1">
           The Royal Wedding of
         </p>
-        
+
         <h1 className="text-3xl font-yatra gold-gradient-text tracking-wide mb-1 font-bold">
-          चि० पवन संग आयु० दीपिका
+          पवन संग दीपिका
         </h1>
 
         <p className="text-[#F7E7B4]/80 text-[11px] font-marcellus tracking-wider uppercase mb-1">

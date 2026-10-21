@@ -39,11 +39,11 @@ export const RajasthaniJharokhaCard = ({
   `;
 
   return (
-    <div className={`flex flex-col items-center group w-full ${widthClass} mx-auto`}>
-      {/* THE ARCH PHOTO FRAME (double-line border with arched window) */}
-      <div className="relative w-full aspect-[184/248] drop-shadow-[0_8px_20px_rgba(0,0,0,0.4)] transition-transform duration-500 group-hover:scale-[1.03]">
+    <div className={`flex flex-col items-center w-full ${widthClass} mx-auto`}>
+      {/* THE ARCH PHOTO FRAME (cusped palace jharokha window) */}
+      <div className="relative w-full aspect-[151/218] drop-shadow-[0_12px_28px_rgba(0,0,0,0.55)]">
         <svg
-          viewBox="12 6 184 248"
+          viewBox="28 24 151 218"
           className="w-full h-full overflow-visible"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -52,7 +52,7 @@ export const RajasthaniJharokhaCard = ({
               <path d={archPath} />
             </clipPath>
 
-            {/* Antique Gold Gradient for the thin border */}
+            {/* Antique Gold Gradient for the arch border */}
             <linearGradient id={`goldGrad-${clipId}`} x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="#ECC870" />
               <stop offset="35%" stopColor="#FFF2B2" />
@@ -65,43 +65,32 @@ export const RajasthaniJharokhaCard = ({
           {/* THE PHOTOGRAPH CLIPPED INSIDE THE MULTIFOIL ARCH */}
           <image
             href={photo}
-            x="30"
+            x="28"
             y="24"
-            width="150"
+            width="151"
             height="216"
             preserveAspectRatio="xMidYMid slice"
             clipPath={`url(#${clipId})`}
-            className="transition-transform duration-700 group-hover:scale-105 origin-center"
           />
 
-          {/* INNER ARCH OUTLINE */}
+          {/* Subtle Outer Carved Contour Shadow */}
+          <path
+            d={archPath}
+            fill="none"
+            stroke="#200308"
+            strokeWidth="3.5"
+            strokeLinejoin="round"
+            opacity="0.5"
+          />
+
+          {/* ROYAL GOLD CUSPED ARCH OUTLINE */}
           <path
             d={archPath}
             fill="none"
             stroke={`url(#goldGrad-${clipId})`}
-            strokeWidth="1.8"
+            strokeWidth="2.4"
             strokeLinejoin="round"
             strokeLinecap="round"
-          />
-
-          {/* DOUBLE-LINE RECTANGULAR FRAME */}
-          <rect
-            x="19.5"
-            y="10.5"
-            width="168"
-            height="238"
-            fill="none"
-            stroke={`url(#goldGrad-${clipId})`}
-            strokeWidth="1.8"
-          />
-          <rect
-            x="23.5"
-            y="14.5"
-            width="160"
-            height="230"
-            fill="none"
-            stroke={`url(#goldGrad-${clipId})`}
-            strokeWidth="1.8"
           />
         </svg>
       </div>

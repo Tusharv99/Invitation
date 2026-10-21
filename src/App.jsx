@@ -130,15 +130,17 @@ export default function App() {
           <EventsSection eventsSchedule={weddingData.eventsSchedule} />
         </div>
 
+        {/* Screen 6: Pushkar Fort Resort Venue & Map Link */}
+        <div id="venue-section">
+          <VenueSection venue={weddingData.venue} />
+        </div>
+
         {/* Screen 5: Complete Family Details from Card Image 1 */}
         <div id="family-section">
           <FamilySection familyDetails={weddingData.familyDetails} />
         </div>
 
-        {/* Screen 6: Pushkar Fort Resort Venue & Map Link */}
-        <div id="venue-section">
-          <VenueSection venue={weddingData.venue} />
-        </div>
+
 
         {/* Screen 7: Blessings & Family Sign-off */}
         <BlessingsSection blessings={weddingData.blessings} couple={weddingData.couple} />
