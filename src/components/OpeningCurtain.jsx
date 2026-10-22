@@ -77,13 +77,13 @@ export const OpeningCurtain = ({ onOpenComplete, onMusicTrigger }) => {
         ref={leftDoorRef}
         className="absolute inset-y-0 left-0 w-1/2 bg-gradient-to-br from-[#4A0E1D] via-[#330510] to-[#1F040A] border-r-2 border-[#D4AF37]/50 shadow-2xl z-10 flex flex-col justify-between p-4"
       >
+        {/* Top-Left Corner */}
         <GoldCorner className="w-10 h-10 text-[#D4AF37]/60" />
         <div className="my-auto opacity-10 flex justify-center">
           <div className="w-64 h-64 rounded-full border-2 border-[#D4AF37] border-dashed"></div>
         </div>
-        <div className="rotate-90 origin-bottom-left">
-          <GoldCorner className="w-10 h-10 text-[#D4AF37]/60" />
-        </div>
+        {/* Bottom-Left Corner */}
+        <GoldCorner className="w-10 h-10 text-[#D4AF37]/60 -scale-y-100" />
       </div>
 
       {/* Right Royal Door / Curtain */}
@@ -91,15 +91,13 @@ export const OpeningCurtain = ({ onOpenComplete, onMusicTrigger }) => {
         ref={rightDoorRef}
         className="absolute inset-y-0 right-0 w-1/2 bg-gradient-to-bl from-[#4A0E1D] via-[#330510] to-[#1F040A] border-l-2 border-[#D4AF37]/50 shadow-2xl z-10 flex flex-col justify-between p-4 items-end"
       >
-        <div className="rotate-90 origin-top-right">
-          <GoldCorner className="w-10 h-10 text-[#D4AF37]/60" />
-        </div>
+        {/* Top-Right Corner */}
+        <GoldCorner className="w-10 h-10 text-[#D4AF37]/60 -scale-x-100" />
         <div className="my-auto opacity-10 flex justify-center">
           <div className="w-64 h-64 rounded-full border-2 border-[#D4AF37] border-dashed"></div>
         </div>
-        <div className="rotate-180">
-          <GoldCorner className="w-10 h-10 text-[#D4AF37]/60" />
-        </div>
+        {/* Bottom-Right Corner */}
+        <GoldCorner className="w-10 h-10 text-[#D4AF37]/60 rotate-180" />
       </div>
 
       {/* Center Invitation Card Seal & Content */}
@@ -114,29 +112,34 @@ export const OpeningCurtain = ({ onOpenComplete, onMusicTrigger }) => {
           <ShehnaiNagadaMotif className="w-8 h-7 text-[#D4AF37]" flip={true} />
         </div>
 
-        <p className="text-[#F7E7B4] text-xs tracking-[0.25em] font-semibold uppercase font-devanagari mb-1">
+        <p className="text-[#F7E7B4] text-sm sm:text-base tracking-[0.25em] font-bold uppercase font-devanagari mb-1.5">
           ॥ श्री गणेशाय नमः ॥
         </p>
 
-        <h2 className="text-[#FAF6F0] font-yatra text-2xl tracking-wide my-1">
+        <h2 className="text-[#FAF6F0] font-yatra text-2xl sm:text-3xl font-bold tracking-wide my-1">
           शाही विवाह निमंत्रण पत्र
         </h2>
 
-        <div className="w-28 h-0.5 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent my-2"></div>
+        <div className="w-32 h-0.5 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent my-2"></div>
 
-        <p className="text-[#F7E7B4]/90 text-sm font-playfair italic mb-1">
+        <p className="text-[#F7E7B4] text-base sm:text-lg font-playfair italic mb-1">
           The Royal Wedding of
         </p>
 
-        <h1 className="text-3xl font-yatra gold-gradient-text tracking-wide mb-1 font-bold">
+        <h1 className="text-4xl sm:text-5xl font-yatra gold-gradient-text tracking-wide mb-1 font-extrabold drop-shadow-[0_2px_16px_rgba(212,175,55,0.45)]">
           पवन संग दीपिका
         </h1>
 
-        <p className="text-[#F7E7B4]/80 text-[11px] font-marcellus tracking-wider uppercase mb-1">
+        <p className="text-[#F7E7B4] text-xs sm:text-sm font-marcellus tracking-widest uppercase mb-2 font-medium">
           (Pawan & Deepika)
         </p>
 
-        <p className="text-[#FAF6F0]/80 text-xs tracking-wider font-devanagari mb-6">
+        {/* Wedding Hashtag Badge */}
+        <div className="inline-flex items-center gap-1.5 px-4 py-1 rounded-full bg-[#FAF6F0]/12 border border-[#D4AF37]/60 text-[#F7E7B4] text-xs sm:text-sm font-bold tracking-wider my-1.5 shadow-[0_2px_12px_rgba(212,175,55,0.25)] font-sans-body">
+          #Pawandeepikasaatphere
+        </div>
+
+        <p className="text-[#FAF6F0] text-xs sm:text-sm tracking-wider font-devanagari font-medium mt-1 mb-5">
           19 एवं 20 नवम्बर 2026 • पुष्कर फोर्ट रिसॉर्ट, पुष्कर
         </p>
 

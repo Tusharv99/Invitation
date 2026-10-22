@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Volume2, VolumeX, Music } from 'lucide-react';
+import { Volume2, VolumeX } from 'lucide-react';
 
 export const BackgroundMusic = ({ autoStart = false }) => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -129,7 +129,7 @@ export const BackgroundMusic = ({ autoStart = false }) => {
       <button
         onClick={toggleMusic}
         aria-label="Toggle Royal Music"
-        className="flex items-center gap-2 px-3.5 py-2 rounded-full backdrop-blur-md bg-[#FAF6F0]/90 border border-[#D4AF37]/40 shadow-lg text-[#4A1521] hover:bg-[#FAF6F0] transition-all duration-300 hover:scale-105 group"
+        className="flex items-center gap-2 px-3.5 py-2 rounded-full backdrop-blur-md bg-[#FAF6F0]/90 border border-[#D4AF37]/40 shadow-lg text-[#4A1521] hover:bg-[#FAF6F0] transition-all duration-300 hover:scale-105 group cursor-pointer"
       >
         <span className="relative flex h-2 w-2">
           {isPlaying && (

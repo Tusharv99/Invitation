@@ -33,7 +33,7 @@ const iconMap = {
 
 const ceremonyShortLabels = {
   mayra: { emoji: '🎁', label: 'मायरा' },
-  'haldi-mehendi': { emoji: '✨', label: 'हल्दी/मेंहदी' },
+  'haldi-mehendi': { emoji: '✨', label: 'हल्दी' },
   sagai: { emoji: '💍', label: 'सगाई' },
   'mahila-sangeet': { emoji: '🎵', label: 'संगीत' },
   'ratri-bhoj-19': { emoji: '🍽️', label: 'प्रीतिभोज' },
@@ -199,8 +199,8 @@ export const DayEventCarousel = ({ dayGroup, dayIndex }) => {
               key={c.id}
               onClick={() => setCurrentIndex(idx)}
               className={`shrink-0 flex items-center gap-1 px-3 py-1.5 rounded-full text-[11px] font-devanagari font-semibold transition-all duration-300 cursor-pointer ${isActive
-                  ? 'bg-gradient-to-r from-[#D4AF37] to-[#BF8C2C] text-[#2B050E] font-bold shadow-[0_0_12px_rgba(212,175,55,0.5)] scale-105'
-                  : 'bg-[#2B050E]/60 text-[#F7E7B4]/80 border border-[#D4AF37]/30 hover:border-[#D4AF37]/60 hover:text-[#FAF6F0]'
+                ? 'bg-gradient-to-r from-[#D4AF37] to-[#BF8C2C] text-[#2B050E] font-bold shadow-[0_0_12px_rgba(212,175,55,0.5)] scale-105'
+                : 'bg-[#2B050E]/60 text-[#F7E7B4]/80 border border-[#D4AF37]/30 hover:border-[#D4AF37]/60 hover:text-[#FAF6F0]'
                 }`}
             >
               <span className="text-xs">{short.emoji}</span>
@@ -265,8 +265,8 @@ export const DayEventCarousel = ({ dayGroup, dayIndex }) => {
                 {/* RAJASTHANI MAHAL JHAROKHA EVENT CARD */}
                 <div
                   className={`relative rounded-3xl bg-gradient-to-b from-[#FFFDF9] via-[#FAF4E8] to-[#F5EBE1] border-2 border-[#D4AF37]/70 text-[#3E0A16] overflow-hidden transition-all duration-300 ${isActive
-                      ? 'shadow-[0_16px_40px_rgba(0,0,0,0.45),0_0_25px_rgba(212,175,55,0.35)] ring-1 ring-[#D4AF37]/50'
-                      : 'shadow-md'
+                    ? 'shadow-[0_16px_40px_rgba(0,0,0,0.45),0_0_25px_rgba(212,175,55,0.35)] ring-1 ring-[#D4AF37]/50'
+                    : 'shadow-md'
                     }`}
                 >
                   {/* TOP ORNATE JHAROKHA ARCH MEHRAB */}
@@ -351,8 +351,8 @@ export const DayEventCarousel = ({ dayGroup, dayIndex }) => {
               onClick={() => setCurrentIndex(idx)}
               aria-label={`Go to slide ${idx + 1}`}
               className={`transition-all duration-300 cursor-pointer ${idx === currentIndex
-                  ? 'w-7 h-2.5 rounded-full bg-gradient-to-r from-[#ECC870] via-[#D4AF37] to-[#BF8C2C] shadow-[0_0_8px_rgba(212,175,55,0.7)]'
-                  : 'w-2.5 h-2.5 rounded-full bg-[#FAF6F0]/25 border border-[#D4AF37]/40 hover:bg-[#FAF6F0]/50'
+                ? 'w-7 h-2.5 rounded-full bg-gradient-to-r from-[#ECC870] via-[#D4AF37] to-[#BF8C2C] shadow-[0_0_8px_rgba(212,175,55,0.7)]'
+                : 'w-2.5 h-2.5 rounded-full bg-[#FAF6F0]/25 border border-[#D4AF37]/40 hover:bg-[#FAF6F0]/50'
                 }`}
             />
           ))}

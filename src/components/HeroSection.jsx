@@ -26,24 +26,24 @@ export const HeroSection = ({ data }) => {
         { opacity: 0, y: -20 },
         { opacity: 1, y: 0, duration: 0.6, delay: 0.1 }
       )
-      .fromTo(
-        jharokhasRef.current,
-        { opacity: 0, scale: 0.96, y: 20 },
-        { opacity: 1, scale: 1, y: 0, duration: 0.7 },
-        '-=0.2'
-      )
-      .fromTo(
-        announcementRef.current,
-        { opacity: 0, y: 15 },
-        { opacity: 1, y: 0, duration: 0.5 },
-        '-=0.3'
-      )
-      .fromTo(
-        badgesRef.current,
-        { opacity: 0, y: 10 },
-        { opacity: 1, y: 0, duration: 0.4 },
-        '-=0.2'
-      );
+        .fromTo(
+          jharokhasRef.current,
+          { opacity: 0, scale: 0.96, y: 20 },
+          { opacity: 1, scale: 1, y: 0, duration: 0.7 },
+          '-=0.2'
+        )
+        .fromTo(
+          announcementRef.current,
+          { opacity: 0, y: 15 },
+          { opacity: 1, y: 0, duration: 0.5 },
+          '-=0.3'
+        )
+        .fromTo(
+          badgesRef.current,
+          { opacity: 0, y: 10 },
+          { opacity: 1, y: 0, duration: 0.4 },
+          '-=0.2'
+        );
     }, sectionRef);
 
     return () => ctx.revert();
@@ -86,13 +86,16 @@ export const HeroSection = ({ data }) => {
           <ShehnaiNagadaMotif className="w-9 h-7 text-[#D4AF37] drop-shadow-sm" flip={true} />
         </div>
 
-        <p className="text-[#D4AF37] text-xs font-bold tracking-[0.25em] uppercase font-devanagari mb-1">
+        <p className="text-[#D4AF37] text-sm sm:text-base font-bold tracking-[0.25em] uppercase font-devanagari mb-2">
           {couple.invocation}
         </p>
 
-        <p className="text-[#F7E7B4]/90 text-[11px] font-devanagari italic max-w-xs mx-auto leading-relaxed px-3">
-          "{couple.shloka}"
-        </p>
+        {/* Auspicious Shloka - Large, Prominent & Clearly Readable */}
+        <div className="relative my-2 py-2 px-3 rounded-2xl bg-[#24040B]/60 border border-[#D4AF37]/40 max-w-sm mx-auto shadow-[0_2px_15px_rgba(0,0,0,0.4)]">
+          <p className="text-[#FFF2B2] text-sm sm:text-base font-devanagari font-semibold leading-relaxed drop-shadow-sm">
+            "{couple.shloka}"
+          </p>
+        </div>
 
         <div className="flex items-center justify-center gap-2 my-2">
           <div className="h-[1px] w-12 bg-gradient-to-r from-transparent to-[#D4AF37]/60"></div>
@@ -129,9 +132,7 @@ export const HeroSection = ({ data }) => {
               className="w-11 h-11 rounded-full bg-gradient-to-br from-[#FFF8E7] via-[#FCEFC7] to-[#ECC870] border-2 border-[#FAF6F0] flex flex-col items-center justify-center shadow-[0_0_25px_rgba(212,175,55,0.6)] text-[#540D1F] hover:scale-115 active:scale-95 transition-all duration-300 cursor-pointer pulse-gold group"
             >
               <Heart className="w-5 h-5 fill-[#72122A] text-[#72122A] group-hover:scale-125 transition-transform" />
-              <span className="text-[8px] font-bold font-devanagari text-[#3E0A16] -mt-0.5 leading-none">
-                संग
-              </span>
+
             </button>
           </div>
         </div>

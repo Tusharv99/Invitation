@@ -19,34 +19,62 @@ export const TouchSparkles = () => {
     window.addEventListener('resize', handleResize);
 
     const sparkles = [];
-    const colors = ['#D4AF37', '#FCF6BA', '#F3E5AB', '#C47B78', '#FAF6F0'];
+    // Light pastel colorful palette: soft rose, peach, lavender, mint, baby blue, warm gold, champagne, lilac, pearl
+    const pastelColors = [
+      '#FFB7C5', // Soft Pastel Rose Pink
+      '#FFD4B2', // Lite Pastel Peach
+      '#E7C6FF', // Lite Pastel Lavender
+      '#BBD0FF', // Lite Pastel Baby Blue
+      '#C8F7DC', // Lite Pastel Mint Green
+      '#FEE4A0', // Soft Pastel Gold / Champagne
+      '#FFC6C7', // Lite Pastel Coral Pink
+      '#E8D7F1', // Lite Pastel Lilac
+      '#FFF4CC', // Soft Pastel Buttercream
+      '#FFFFFF'  // Shimmering Pearl White
+    ];
 
-    const addSparkle = (x, y) => {
-      for (let i = 0; i < 3; i++) {
+    const addSparkle = (x, y, count = 4) => {
+      for (let i = 0; i < count; i++) {
         sparkles.push({
-          x: x + (Math.random() - 0.5) * 15,
-          y: y + (Math.random() - 0.5) * 15,
-          size: Math.random() * 4 + 2,
-          color: colors[Math.floor(Math.random() * colors.length)],
-          vx: (Math.random() - 0.5) * 2,
-          vy: (Math.random() - 0.5) * 2 - 1,
+          x: x + (Math.random() - 0.5) * 20,
+          y: y + (Math.random() - 0.5) * 20,
+          size: Math.random() * 5 + 3, // slightly more visible delicate stars
+          color: pastelColors[Math.floor(Math.random() * pastelColors.length)],
+          vx: (Math.random() - 0.5) * 2.5,
+          vy: (Math.random() - 0.5) * 2.2 - 0.9, // gentle soft float
           life: 1,
-          decay: Math.random() * 0.03 + 0.02
+          decay: Math.random() * 0.022 + 0.016
         });
       }
     };
 
+    // Tap / Click spawns a generous cluster of lite pastel sparkles
+    const handlePointerDown = (e) => {
+      addSparkle(e.clientX, e.clientY, 8);
+    };
+
+    // Move spawns continuous lite pastel sparkles trail
     const handlePointerMove = (e) => {
-      addSparkle(e.clientX, e.clientY);
+      addSparkle(e.clientX, e.clientY, 3);
+    };
+
+    const handleTouchStart = (e) => {
+      if (e.touches.length > 0) {
+        const t = e.touches[0];
+        addSparkle(t.clientX, t.clientY, 9);
+      }
     };
 
     const handleTouchMove = (e) => {
       if (e.touches.length > 0) {
-        addSparkle(e.touches[0].clientX, e.touches[0].clientY);
+        const t = e.touches[0];
+        addSparkle(t.clientX, t.clientY, 4);
       }
     };
 
+    window.addEventListener('pointerdown', handlePointerDown, { passive: true });
     window.addEventListener('pointermove', handlePointerMove, { passive: true });
+    window.addEventListener('touchstart', handleTouchStart, { passive: true });
     window.addEventListener('touchmove', handleTouchMove, { passive: true });
 
     const render = () => {
@@ -64,10 +92,12 @@ export const TouchSparkles = () => {
         }
 
         ctx.save();
-        ctx.globalAlpha = p.life;
+        ctx.globalAlpha = Math.max(0, p.life);
         ctx.fillStyle = p.color;
+        ctx.shadowColor = p.color;
+        ctx.shadowBlur = 6;
 
-        // Draw 4-point golden star sparkle
+        // Draw original 4-point star sparkle
         const s = p.size * p.life;
         ctx.beginPath();
         ctx.moveTo(p.x, p.y - s);
@@ -86,7 +116,9 @@ export const TouchSparkles = () => {
 
     return () => {
       window.removeEventListener('resize', handleResize);
+      window.removeEventListener('pointerdown', handlePointerDown);
       window.removeEventListener('pointermove', handlePointerMove);
+      window.removeEventListener('touchstart', handleTouchStart);
       window.removeEventListener('touchmove', handleTouchMove);
       cancelAnimationFrame(animId);
     };
@@ -95,8 +127,8 @@ export const TouchSparkles = () => {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 pointer-events-none z-30"
-      style={{ opacity: 0.9 }}
+      className="fixed inset-0 pointer-events-none z-40"
+      style={{ opacity: 0.95 }}
     />
   );
 };
